@@ -5,12 +5,15 @@
 #include <iostream>
 #include <vector>
 
+
 using std::vector;
 
 double average(const vector<double>& numbers){
     double sum = 0;
     for(auto it = std::begin(numbers); it != std::end(numbers) - 1; ++it){
-        sum = *it;
+        std::cout << "sum = " << sum << std::endl;
+        std::cout << "*it = " << *it << std::endl;
+        sum += *it;
     }
     return sum / numbers.size();
 }
